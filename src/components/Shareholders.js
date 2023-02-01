@@ -3,8 +3,8 @@ import { DataGrid } from '@mui/x-data-grid';
 
 const COLUMNS = [
     {
-        field : "name",
-        headerName : "Name",
+        field : 'name',
+        headerName : 'Name',
         flex: 1
     },
     {
@@ -43,11 +43,14 @@ const COLUMNS = [
 
 const Shareholders = () => {
   return (
+   
     <DataGrid 
+    sx={{ height: 400, width: '100%' }}
     columns={COLUMNS} 
     rows={[]}
     pageSize={5}
     rowsPerPageOptions={[5]} />
+    
   )
 }
 
