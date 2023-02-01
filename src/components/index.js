@@ -28,11 +28,20 @@ const ROWS = [
 
 
  const Index = () => {
+
   const [shareholders,setShareholder] = useState(ROWS);
+
+  const deleteHandler = (id) => 
+       
+        setShareholder([
+          ...shareholders.filter((shareholder) => shareholder.id !== id),
+        ])
+ 
+
   return (
     <Grid container spacing={3} sx={{p : 2}}>
       <Grid itme xs={12} >
-        <Shareholders  shareholders ={shareholders} />
+        <Shareholders  shareholders ={shareholders} onDelete ={deleteHandler} />
       </Grid>
     </Grid>
   );
