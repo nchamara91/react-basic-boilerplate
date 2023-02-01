@@ -5,7 +5,8 @@ const COLUMNS = [
     {
         field : 'name',
         headerName : 'Name',
-        flex: 1
+        flex: 1,
+        renderCell : (params) => <p>{params.row.lname}</p>,
     },
     {
         field : "address",
@@ -41,15 +42,15 @@ const COLUMNS = [
     },
 ]
 
-const Shareholders = () => {
+const Shareholders = ({shareholders}) => {
   return (
    
     <DataGrid 
     sx={{ height: 400, width: '100%' }}
     columns={COLUMNS} 
-    rows={[]}
+    rows={shareholders}
     pageSize={5}
-    rowsPerPageOptions={[5]} />
+    rowsPerPageOptions={[5]}  />
     
   )
 }
