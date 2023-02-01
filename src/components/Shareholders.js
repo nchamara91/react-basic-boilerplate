@@ -1,5 +1,7 @@
 import React from 'react'
 import { DataGrid } from '@mui/x-data-grid';
+import { Button } from '@mui/material';
+
 
 const COLUMNS = [
     {
@@ -34,13 +36,16 @@ const COLUMNS = [
         headerName : "Value per share",
         flex: 1
     },
-       
     {
-        field : "share_class",
-        headerName : "Share class",
-        flex: 1
-    },
+        field : "action",
+        headerName : "",
+        flex: 1,
+        renderCell : () => <Button color="error" variant='contained' > Delete</Button>
+    }
+       
 ]
+
+
 
 const Shareholders = ({shareholders}) => {
   return (

@@ -28,7 +28,7 @@ const ROWS = [
 
 
  const Index = () => {
-  const [shareholders,setShareholder] = useState([ROWS]);
+  const [shareholders,setShareholder] = useState(ROWS);
   return (
     <Grid container spacing={3} sx={{p : 2}}>
       <Grid itme xs={12} >
