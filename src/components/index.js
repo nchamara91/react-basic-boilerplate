@@ -1,6 +1,12 @@
-function Index(){
-    return <div>Shareholders</div>
+import React from 'react'
+import  Shareholders  from "./Shareholders";
+
+export const index = () => {
+  return <Shareholders />
 }
 
-export default Shareholder;
+export default index;
+
+
+
 
