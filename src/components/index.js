@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Grid } from "@mui/material";
 import Shareholders from "./Shareholders";
+import ShareholderForm from "./ShareholderForm"
 
 const ROWS = [
   {
@@ -30,6 +31,7 @@ const ROWS = [
  const Index = () => {
 
   const [shareholders,setShareholder] = useState(ROWS);
+  const [formData,SetFormData] = useState({ });
 
   const deleteHandler = (id) => 
        
@@ -40,6 +42,9 @@ const ROWS = [
 
   return (
     <Grid container spacing={3} sx={{p : 2}}>
+        <Grid item xs={12}>
+            <ShareholderForm  />
+        </Grid>
       <Grid itme xs={12} >
         <Shareholders  shareholders ={shareholders} onDelete ={deleteHandler} />
       </Grid>
